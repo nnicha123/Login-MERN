@@ -20,27 +20,41 @@ class Users extends Component {
                 users: json
             })
         })
+    }
 
+    removeUser = (id) => {
+        fetch('http://localhost:5000/api/users/' + id, { method: 'delete' }).then(data => {
+            return data.json()
+        }).then(() => {
+            fetch('http://localhost:5000/api/users').then((data) => {
+                return data.json()
+            }).then(json => {
+                this.setState({
+                    users: json
+                })
+            })
+        })
     }
 
     render() {
 
-        return (
+            return(
 
-            <div className="outerContainer">
-                <h3>Current Users!</h3>
-                <div className="usersWrap">
-                    {this.state.users.map(el =>
-                        <div className="nameCards" key={el._id}>
-                            <img src={cake2} className="imageCard" />
-                            <div className="infoCard">
-                                <div>Name : {el.name}</div>
-                                <div>Age : {el.age}</div>
-                                <div>Email : {el.email}</div>
+            <div className = "outerContainer" >
+                    <h3>Current Users!</h3>
+                    <div className="usersWrap">
+                        {this.state.users.map(el =>
+                            <div className="nameCards" key={el._id}>
+                                <img src={cake2} className="imageCard" />
+                                <div className="infoCard">
+                                    <div>Name : {el.name}</div>
+                                    <div>Age : {el.age}</div>
+                                    <div>Email : {el.email}</div>
+                                    <button onClick={() => this.removeUser(el._id)}>Remove</button>
+                                </div>
                             </div>
-                        </div>
-                    )}
-                </div>
+                        )}
+                    </div>
             </div>
 
         )

@@ -1,0 +1,13 @@
+.homeWrapper{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.homeWrapper h2{
+    font-size: 55px;
+}
+.homeWrapper p{
+    font-size: 30px;
+}
