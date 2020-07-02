@@ -10,4 +10,8 @@ router.post('/users',(req,res) => {
     User.create(req.body).then(user => res.send(user))
 })
 
+router.delete('/users/:id',(req,res) => {
+    User.findByIdAndRemove({_id:req.params.id}).then(user => res.send(user))
+})
+
 module.exports = router
