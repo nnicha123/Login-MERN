@@ -1,0 +1,39 @@
+.outerForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: maroon;
+}
+.outerForm h1{
+    margin-bottom: 30px;
+}
+form{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    position: relative;
+    height: 370px;
+    width: 200px;
+    font-size: 20px;
+    color: maroon;
+    font-weight: bold;
+    border-radius: 5px;
+}
+form input{
+    margin-top: 5px;
+    height: 25px;
+}
+.form-group{
+    padding: 10px;
+}
+.postButton{
+    padding: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background : rgb(88, 12, 12);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 5px;
+}

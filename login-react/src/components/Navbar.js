@@ -9,11 +9,11 @@ function Navbar() {
             <Link  to='/'>
                     <li>Home</li>
                 </Link>
-                <Link  to='/users'>
-                    <li>Current Users</li>
-                </Link>
                 <Link  to='/form'>
                     <li>Add User</li>
+                </Link>
+                <Link  to='/users'>
+                    <li>Current Users</li>
                 </Link>
             </ul>
         </nav>
