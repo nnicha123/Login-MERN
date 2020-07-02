@@ -1,0 +1,28 @@
+.outerContainer{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.outerContainer h3{
+    font-size: 40px;
+}
+.nameCards{
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin: 10px;
+    font-size: 13px;
+}
+.infoCard {
+    padding: 10px;
+}
+.imageCard{
+    width: 100%;
+    height: 150px;
+}
+.usersWrap{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
